@@ -18,7 +18,7 @@ def calculadora():
         print("3. Multiplicar")
         print("4. Dividir")
         print("5. Ver histórico")
-        print("6. Sair")
+        print("6. Exit")
 
         escolha = input("Escolha uma operação (1-6): ")
 
