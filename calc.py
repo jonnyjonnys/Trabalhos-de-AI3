@@ -1,4 +1,15 @@
+# Função para exibir o histórico
+def exibir_historico(historico):
+    if not historico:
+        print("Histórico vazio.")
+    else:
+        print("Histórico:")
+        for i, entrada in enumerate(historico, 1):
+            print(f"{i}. {entrada}")
+
 def calculadora():
+  historico = []  # Lista para guardar o histórico das operações
+
   while True:
         print("\nOpções:")
         print("1. Somar")
@@ -35,7 +46,12 @@ def calculadora():
                 else:
                     operacao = "Erro: Divisão por zero não permitida!"
                     resultado = None
-                  
+                  print(operacao)
+            if resultado is not None:  # Apenas guarda se a operação for válida
+                historico.append(operacao)
+        else:
+            print("Escolha inválida. Tente novamente.")
+
 # Executar a calculadora
 calculadora()
 
